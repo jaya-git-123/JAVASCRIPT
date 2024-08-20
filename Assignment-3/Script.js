@@ -3,9 +3,10 @@
 1) Name
 2) Age
 3) Weight
-4) Blood Pressure
-5) Diseases
-6) Alcohol
+4) Blood group
+5) Blood Pressure
+6) Diseases
+7) Alcohol
 */
 
 let name = prompt("Enter your Name:");
