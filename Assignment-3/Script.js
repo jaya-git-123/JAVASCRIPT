@@ -21,6 +21,8 @@ console.log(` Name :${name}, Age :${age}, Weight :${weight}, BloodPressure :${bl
 //else if
 if(age < 20){
     console.log ("You are not eligible to donate blood due to age")
+}else if (bloodGroup == false) {
+    console.log("You are not eligible,Blood group is not matching")
 }else if(weight < 50){
     console.log ("You are not eligible to donate blood due to low Weight")
 }else if(bloodPressure >100){
