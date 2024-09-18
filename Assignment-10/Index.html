@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session Storage</title>
+    <style>
+        body {
+    box-sizing: border-box;
+    margin: 20px 20px 30px 40px;
+    padding: 0;
+}
+button {
+    position: absolute;
+    height: 40px; 
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid blueviolet;
+    color: #130f40;
+    background: linear-gradient(to right, #f368e0, #48dbfb);
+    animation: wiggle 2s linear infinite;
+}
+.clearbtn {
+    margin-left: 170px;
+}
+    </style>
+</head>
+<body>
+    <button onclick="storeData()" class="storebtn">Store</button>
+    <button onclick="clearData()" class="clearbtn">Clear</button>
+    <script>
+        function storeData() {
+            let name = prompt("Enter your full name:");
+            let age = prompt("Enter your age:");
+            let username = prompt("Enter your username:");
+            let address = prompt("Enter your address:");
+            let userDetails = {
+                name: name,
+                age: age,
+                username: username,
+                address: address
+            };
+            sessionStorage.setItem("user", JSON.stringify(userDetails));
+            alert("User data stored successfully!");
+        }
+        function clearData() {
+            sessionStorage.removeItem("user");
+            alert("User data cleared!");
+        }
+    </script>
+</body>
+</html>
