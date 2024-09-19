@@ -12,7 +12,7 @@ const NavBar = () => {
                 </ul>
             </nav>
         </div>
-    );
-};
+    )
+}
 
 export default NavBar;
